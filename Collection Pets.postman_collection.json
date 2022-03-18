@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "a29fb41e-fc0e-4995-897c-c3b120d30ac0",
+		"name": "Collection Pets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Pet",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"value": "Emortales",
+						"key": "api_key"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 44300,\r\n  \"category\": {\"id\": 0,\"name\": \"mamifero\"},\r\n  \"name\": \"Julieta \",\"photoUrls\": [\"URL\"],\r\n  \"tags\": [ {\"id\": 0,\"name\": \"mascota\"}],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://petstore.swagger.io/v2/pet"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "https://petstore.swagger.io/v2/pet/44300"
+			},
+			"response": []
+		},
+		{
+			"name": "Put Pet",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 44300,\r\n  \"category\": {\"id\": 1,\"name\": \"ave\"},\r\n  \"name\": \"panfilo \",\"photoUrls\": [\"URL\"],\r\n  \"tags\": [ {\"id\": 0,\"name\": \"mascota\"}],\r\n  \"status\": \"available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://petstore.swagger.io/v2/pet"
+			},
+			"response": []
+		}
+	]
+}
